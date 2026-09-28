@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Recharge Test Console</title>
+<style>
+body{font:16px system-ui,-apple-system,Segoe UI,sans-serif;background:#0f172a;color:#e2e8f0;max-width:820px;margin:36px auto;padding:0 20px}
+main{background:#1e293b;border-radius:16px;padding:28px;box-shadow:0 20px 60px #020617}
+h1{margin-top:0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+a,button{display:inline-block;background:#38bdf8;color:#082f49;padding:11px 16px;border-radius:9px;text-decoration:none;font-weight:700;margin:6px 6px 6px 0}
+.secondary{background:#334155;color:#e2e8f0}.note{color:#94a3b8;line-height:1.65}.card{background:#0f172a;border:1px solid #334155;border-radius:12px;padding:16px}.tier{margin:5px 0;color:#bae6fd}
+</style>
+</head>
+<body><main>
+<h1>充值测试控制台</h1>
+<p class="note">GitHub 原生入口。选择档位后进入 Actions 页面执行；Cookie 从仓库 Secret 读取，页面不收集账号密码。当前流程只创建测试订单并验证回调，不打开支付商页面。</p>
+<div class="grid">
+<div class="card"><h2>平台币档位</h2><div class="tier">CNY5 → 5</div><div class="tier">CNY30 → 30</div><div class="tier">CNY100 → 100</div><div class="tier">CNY200 → 200</div><div class="tier">CNY500 → 500</div><div class="tier">CNY1000 → 1000</div><div class="tier">CNY2000 → 2000</div></div>
+<div class="card"><h2>金币档位</h2><div class="tier">CNY1 → 1000</div><div class="tier">CNY5 → 5000</div><div class="tier">CNY30 → 30000</div><div class="tier">CNY100 → 100000</div><div class="tier">CNY200 → 200000</div><div class="tier">CNY500 → 500000</div><div class="tier">CNY1000 → 1000000</div><div class="tier">CNY2000 → 2000000</div></div>
+</div>
+<p><a href="https://github.com/earnbabysol/oneclick-recharge-tool/actions/workflows/recharge.yml">打开执行页面</a><a class="secondary" href="https://github.com/earnbabysol/oneclick-recharge-tool">查看私密仓库</a></p>
+<p class="note">首次使用：在仓库 Settings → Secrets and variables → Actions 新增 <code>TEST_SESSION_COOKIE</code>，再在 Actions 页面点 Run workflow，填写充值页面 URL、类型和档位。</p>
+</main></body></html>
